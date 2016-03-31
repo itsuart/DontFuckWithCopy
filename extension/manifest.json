@@ -1,0 +1,14 @@
+{
+  "name": "Prevent copy shenanigans",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Prevents some websites to append text to copied data",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at":"document_start"
+    }
+  ]
+}
